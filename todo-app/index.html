@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-container">
+            <!-- Header -->
+            <div class="header">
+                <h1>
+                    <i class="fas fa-check-circle"></i> My To-Do List
+                </h1>
+                <p class="subtitle">Stay organized and productive</p>
+            </div>
+
+            <!-- Input Section -->
+            <div class="input-section">
+                <input 
+                    type="text" 
+                    id="todoInput" 
+                    class="todo-input" 
+                    placeholder="Add a new task..."
+                    autocomplete="off"
+                >
+                <button id="addBtn" class="add-btn">
+                    <i class="fas fa-plus"></i> Add
+                </button>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-list"></i> All
+                </button>
+                <button class="filter-btn" data-filter="active">
+                    <i class="fas fa-circle"></i> Active
+                </button>
+                <button class="filter-btn" data-filter="completed">
+                    <i class="fas fa-check"></i> Completed
+                </button>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">Total:</span>
+                    <span class="stat-value" id="totalCount">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Active:</span>
+                    <span class="stat-value" id="activeCount">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Completed:</span>
+                    <span class="stat-value" id="completedCount">0</span>
+                </div>
+            </div>
+
+            <!-- Todo List -->
+            <div class="todo-list" id="todoList">
+                <div class="empty-state">
+                    <i class="fas fa-inbox"></i>
+                    <p>No tasks yet. Add one to get started!</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button id="clearCompleted" class="clear-btn">
+                    <i class="fas fa-trash"></i> Clear Completed
+                </button>
+                <button id="clearAll" class="delete-all-btn">
+                    <i class="fas fa-times-circle"></i> Clear All
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
